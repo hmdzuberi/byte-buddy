@@ -28,6 +28,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Regular Test
-      run: mvn -pl byte-buddy-dep test -am -Dtest=net.bytebuddy.description.method.MethodDescriptionForLoadedTest#testToString
+      run: mvn -pl byte-buddy-dep test -Dtest=net.bytebuddy.description.method.MethodDescriptionForLoadedTest#testToString
     - name: NonDex Test
       run: mvn -pl byte-buddy-dep edu.illinois:nondex-maven-plugin:nondex -Dtest=net.bytebuddy.description.method.MethodDescriptionForLoadedTest#testToString
