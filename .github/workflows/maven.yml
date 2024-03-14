@@ -27,6 +27,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Build
+      run: mvn clean install -DskipTests=true
     - name: Regular Test
       run: mvn -pl byte-buddy-dep test -Dtest=net.bytebuddy.description.method.MethodDescriptionForLoadedTest#testToString
     - name: NonDex Test
